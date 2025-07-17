@@ -26,7 +26,7 @@ A simple **URL Shortener app** built using the **MERN stack** (MongoDB, Express,
 
 ## 📸 Screenshots
 
-![URL Shortener Screenshot](./screenshots/home.png)
+![URL Shortener Screenshot](./home.png)
 
 ---
 
