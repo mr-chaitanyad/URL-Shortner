@@ -17,10 +17,10 @@ A simple **URL Shortener app** built using the **MERN stack** (MongoDB, Express,
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Axios, CSS
+- **Frontend:** React,HTML, CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB (using Mongoose)
-- **Other:** UUID for generating unique short codes
+- **Other:** shortid for generating unique short codes
 
 ---
 
