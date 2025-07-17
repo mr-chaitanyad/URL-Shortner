@@ -1,0 +1,157 @@
+.login-signup-wrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-signup-wrapper .wrapper {
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-signup-wrapper .title-text {
+  display: flex;
+  width: 200%;
+  transition: 0.6s;
+}
+
+.login-signup-wrapper.signup-mode .title-text {
+  transform: translateX(-50%);
+}
+
+.login-signup-wrapper .title {
+  width: 50%;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-signup-wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.login-signup-wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  background: #e0e0e0;
+}
+
+.login-signup-wrapper .slide-controls button {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.login-signup-wrapper .slide-controls button.active {
+  color: #fff;
+}
+
+.login-signup-wrapper .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(100deg, #2563eb, #35373a);
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  z-index: 0;
+}
+
+.login-signup-wrapper.signup-mode .slider-tab {
+  left: 50%;
+}
+
+.login-signup-wrapper .form-inner {
+  display: flex;
+  width: 200%;
+  transition: 0.6s;
+}
+
+.login-signup-wrapper.signup-mode .form-inner {
+  transform: translateX(-50%);
+}
+
+.login-signup-wrapper form {
+  width: 50%;
+  transition: opacity 0.6s;
+}
+
+.login-signup-wrapper form.hidden {
+  display: none;
+}
+
+.login-signup-wrapper .field {
+  margin: 10px 0;
+}
+
+.login-signup-wrapper .field input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+
+}
+
+.login-signup-wrapper .pass-link,
+.login-signup-wrapper .signup-link {
+  text-align: right;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.login-signup-wrapper .pass-link a,
+.login-signup-wrapper .signup-link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.login-signup-wrapper .field.btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.login-signup-wrapper .btn-layer {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  transition: 0.4s;
+  background: linear-gradient(100deg, #2563eb, #35373a);
+}
+
+.login-signup-wrapper .field.btn:hover .btn-layer {
+  left: 0;
+  
+}
+
+.login-signup-wrapper .field.btn input[type="submit"] {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}

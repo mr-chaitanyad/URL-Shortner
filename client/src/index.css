@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  height: 100vh;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, M enlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+.app-body {
+  width: 100%;
+  height: calc(100vh - 56px);
+  /* adjust for NavBar height */
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Form component */
+
+.input-url {
+  background-color: #1e293b;
+  border-radius: 50px;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  display: flex;
+  position: relative;
+
+  margin-top: 200px;
+  margin-left: 500px;
+}
+
+.textBox1 {
+  background-color: #1e293b;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 45px;
+  border-radius: 50px;
+  padding: 10px 100px 10px 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  padding-right: 130px;
+}
+
+.textBox1:focus {
+  background-color: #1e293b;
+  color: white;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-submit {
+  border-radius: 50px;
+  background: linear-gradient(100deg, #2563eb, #35373a);
+  border: none;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+/* table container for controlling alignment and overflow */
+.table-container {
+  max-width: 90%;
+  width: 1000px;
+  overflow-x: auto;
+  border-radius: 16px;
+  background-color: #1e293b;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  margin-top: 40px;
+  margin-left: 300px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+  color: white;
+}
+
+.custom-table thead{
+  background: linear-gradient(90deg,#35373a, #2563eb);
+}
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+}
+
+.custom-table tbody tr {
+  border-bottom: 15px solid transparent;
+}
+
+
+.custom-table thead {
+  background-color: #2563eb;
+  margin: 100px;
+  padding: 100px;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #334155;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #475569;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.copy-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Backgroud animation  */
+.wave-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind your content */
+  overflow: hidden;
+}
+
+.wave-background::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, #2563eb 10%, #1e3a8a 100%);
+  animation: wave 10s linear infinite;
+  opacity: 0.1;
+  border-radius: 40%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+
+/* Nav Bar */
+
+.form-switch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+
+

@@ -1,0 +1,126 @@
+/* General container styling */
+.data-table-container {
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header styling */
+.data-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.data-table-header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+/* Add button styling */
+.add-btn {
+  background: linear-gradient(90deg, #35373a, #2563eb);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+.add-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.03);
+}
+
+/* Table styling */
+.url-table {
+  width: 100%;
+  border-collapse: collapse;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.url-table th, .url-table td {
+  text-align: left;
+  padding: 12px;
+  color: inherit; /* Inherit color from container */
+}
+
+.url-table thead {
+  border-bottom: 2px solid #e5e7eb;
+  transition: border-color 0.3s;
+}
+
+.url-table tbody tr:nth-child(odd) {
+  transition: background-color 0.3s;
+}
+
+.url-table tbody tr:hover {
+  transition: background-color 0.3s;
+}
+
+.truncate {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Light mode styles */
+.data-table-container.light {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.data-table-container.light .url-table thead {
+  border-bottom: 2px solid #d1d5db;
+}
+
+.data-table-container.light .url-table tbody tr:nth-child(odd) {
+  background-color: #f3f4f6;
+}
+
+.data-table-container.light .url-table tbody tr:hover {
+  background-color: #e5e7eb;
+}
+
+.data-table-container.light .no-data {
+  color: #4b5563;
+}
+
+/* Dark mode styles */
+.data-table-container.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.data-table-container.dark .url-table thead {
+  border-bottom: 2px solid #334155;
+}
+
+.data-table-container.dark .url-table tbody tr:nth-child(odd) {
+  background-color: #1e293b;
+}
+
+.data-table-container.dark .url-table tbody tr:hover {
+  background-color: #334155;
+}
+
+.data-table-container.dark .no-data {
+  color: #94a3b8;
+}
