@@ -19,7 +19,6 @@ function UrlForm({ onUrlCreated }) {
 
             setLoading(true);
 
-            const response = await createShortUrl(originalUrl);
 
             alert("Short URL Created Successfully");
 

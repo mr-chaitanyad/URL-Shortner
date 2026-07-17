@@ -443,6 +443,7 @@ function Dashboard() {
                                         <a
                                         href={item.originalUrl}
                                         target="_blank"
+                                          rel="noopener noreferrer"
                                         className="
                                         text-blue-600
                                         break-all
@@ -487,6 +488,7 @@ function Dashboard() {
                                                 <a
                                                 href={item.shortUrl}
                                                 target="_blank"
+                                                  rel="noopener noreferrer"
                                                 className="
                                                 text-green-600
                                                 font-medium
