@@ -17,8 +17,8 @@ const createShortUrl = async (req,res) =>{
         }
 
         const shortCode = nanoid(8);
-        const baseUrl = `${req.protocol}://${req.get('host')}`;
-        const shortUrl = `${baseUrl}/${shortCode}`;
+        
+        const shortUrl = `${process.env.BASE_URL}/${shortCode}`;
 
         const newUrl = new Url({
             user: req.user._id,
