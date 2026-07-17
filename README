@@ -1,0 +1,237 @@
+# 🔗 URL Shortener
+
+A full-stack MERN URL Shortener application that allows users to create short links, manage them from a personal dashboard, and track click analytics such as browser, device, operating system, IP address, and location.
+
+## 🌐 Live Demo
+
+**Frontend:** https://url-shortner-mu-gold.vercel.app
+
+**Backend API:** https://url-shortner-r2u6.onrender.com
+
+---
+
+## ✨ Features
+
+- User Authentication (JWT)
+- User Registration & Login
+- Create Short URLs
+- Automatic Redirection
+- Personal Dashboard
+- Copy Short URL
+- Delete Short URLs
+- Click Analytics
+- Browser Detection
+- Operating System Detection
+- Device Detection
+- IP Address Tracking
+- Country, Region & City Tracking
+- Responsive UI
+- Secure Password Hashing (bcrypt)
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Axios
+- Tailwind CSS
+
+### Backend
+- Node.js
+- Express.js
+- JWT Authentication
+- bcryptjs
+- NanoID
+
+### Database
+- MongoDB Atlas
+- Mongoose
+
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
+
+---
+
+## 📂 Project Structure
+
+```
+URL-Shortner/
+│
+├── backend/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── config/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## 🚀 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/mr-chaitanyad/URL-Shortner.git
+```
+
+Move into project
+
+```bash
+cd URL-Shortner
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create `.env`
+
+```env
+PORT=5000
+
+MONGO_URI=YOUR_MONGODB_URI
+
+JWT_SECRET=YOUR_SECRET
+
+BASE_URL=http://localhost:5000
+```
+
+Run backend
+
+```bash
+npm start
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd frontend
+npm install
+```
+
+Create `.env`
+
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+Run frontend
+
+```bash
+npm start
+```
+
+---
+
+## API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/auth/register` | Register User |
+| POST | `/api/auth/login` | Login User |
+
+### URL
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/url/create` | Create Short URL |
+| GET | `/api/url/myurls` | Get User URLs |
+| DELETE | `/api/url/:id` | Delete URL |
+| GET | `/:shortCode` | Redirect |
+
+---
+
+## Analytics Captured
+
+- Total Clicks
+- IP Address
+- Browser
+- Operating System
+- Device Type
+- Referrer
+- Country
+- Region
+- City
+- Latitude
+- Longitude
+- Timezone
+- ISP
+
+---
+
+## Deployment
+
+### Frontend
+
+Vercel
+
+### Backend
+
+Render
+
+### Database
+
+MongoDB Atlas
+
+---
+
+## Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Login
+- Register
+- Dashboard
+- URL Analytics
+
+---
+
+## Future Improvements
+
+- QR Code Generation
+- Custom Short URL
+- Password Protected Links
+- Link Expiration
+- Export Analytics
+- Dark Mode
+- Admin Dashboard
+- Custom Domain Support
+
+---
+
+## Author
+
+**Chaitanya Dhayarkar**
+
+GitHub: https://github.com/mr-chaitanyad
+
+LinkedIn: *(Add your LinkedIn profile)*
+
+---
+
+## License
+
+This project is licensed under the MIT License.
