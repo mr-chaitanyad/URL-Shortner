@@ -11,7 +11,13 @@ const authRoutes = require("../routes/authRoutes");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://url-shortner-mu-gold.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(helmet());
 app.use(morgan('dev'));
 

@@ -104,9 +104,10 @@ const redirectUrl = async (req, res) => {
         url.totalClicks += 1;
 
         await url.save();
-
+        console.log("URL updated with new click count:", url.originalUrl)
         // Redirect
         return res.redirect(url.originalUrl);
+
 
     } catch (error) {
         console.error(error);
