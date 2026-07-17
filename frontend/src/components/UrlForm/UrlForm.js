@@ -17,7 +17,7 @@ function UrlForm({ onUrlCreated }) {
             setLoading(true);
 
             await api.post(
-                "/url/create",
+                "/url/shorten",
                 { originalUrl },
                 {
                     headers: {
