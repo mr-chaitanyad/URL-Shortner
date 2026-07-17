@@ -1,10 +1,10 @@
 import { useState } from "react";
+import api from "../../services/api";
 
 function UrlForm({ onUrlCreated }) {
 
     const [originalUrl, setOriginalUrl] = useState("");
     const [loading, setLoading] = useState(false);
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -15,7 +15,7 @@ function UrlForm({ onUrlCreated }) {
 
         try {
             setLoading(true);
-            console.log(originalUrl);
+
             await api.post(
                 "/url/shorten",
                 { originalUrl },
