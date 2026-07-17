@@ -6,7 +6,6 @@ function UrlForm({ onUrlCreated }) {
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
-
         e.preventDefault();
 
         if (!originalUrl) {
@@ -15,30 +14,32 @@ function UrlForm({ onUrlCreated }) {
         }
 
         try {
-
             setLoading(true);
 
+            await api.post(
+                "/url/create",
+                { originalUrl },
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    },
+                }
+            );
 
             alert("Short URL Created Successfully");
 
             setOriginalUrl("");
 
-            // Refresh URL List
             onUrlCreated();
 
         } catch (error) {
-
             alert(
                 error.response?.data?.message ||
                 "Something went wrong"
             );
-
         } finally {
-
             setLoading(false);
-
         }
-
     };
 
     return (
