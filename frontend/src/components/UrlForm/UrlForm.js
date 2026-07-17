@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { createShortUrl } from "../../services/urlService";
 
 function UrlForm({ onUrlCreated }) {
 
