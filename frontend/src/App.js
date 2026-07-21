@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Analytics from "./pages/Analytics";
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
@@ -40,7 +41,14 @@ function App() {
                     </ProtectedRoute>
                 }
             />
-
+            <Route
+                path="/analytics/:id"
+                element={
+                    <ProtectedRoute>
+                        <Analytics />
+                    </ProtectedRoute>
+                }
+            />
         </Routes>
     );
 }
