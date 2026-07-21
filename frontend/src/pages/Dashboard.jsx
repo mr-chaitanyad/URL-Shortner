@@ -6,8 +6,6 @@ import {
     FiCopy,
     FiMousePointer,
     FiCalendar,
-    FiLink,
-    FiBarChart2
 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
@@ -16,8 +14,6 @@ function Dashboard() {
 
     const [urls, setUrls] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    const navigate = useNavigate();
 
     const fetchUrls = async () => {
         try {
