@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-
 const urlRoutes = require("../routes/urlRoutes");
 const { redirectUrl } = require("../controllers/urlController");
 
@@ -31,7 +30,6 @@ app.get ("/",(req,res)=>{
 
 app.use("/api/url",urlRoutes);
 app.use("/api/auth",authRoutes);
-
 
 app.get("/:shortCode", redirectUrl);
     

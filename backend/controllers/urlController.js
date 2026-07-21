@@ -1,7 +1,7 @@
 const { nanoid } = require('nanoid');
 const Url = require("../models/Url");
-const Click = require("../models/Click");
-const UAParser = require('ua-parser-js');
+
+
 const getGeoLocation = require("../src/utils/getGeoLocation");
 
 
@@ -64,60 +64,33 @@ const getMyUrls = async (req,res) =>{
 }
 
 const redirectUrl = async (req, res) => {
+
     try {
+
         const { shortCode } = req.params;
 
-        // Find URL
         const url = await Url.findOne({ shortCode });
 
+        
         if (!url) {
-            return res.status(404).json({
-                success: false,
-                message: "Short URL not found"
-            });
+            return res.status(404).send("URL not found");
         }
-        const parser = new UAParser(req.headers["user-agent"]);
-        const result = parser.getResult();
-
-        const location = await getGeoLocation(req.ip);
-
-        // Save Click Analytics
-        const click = await Click.create({
-
-        urlId: url._id,
-        ip: req.ip,
-        browser: result.browser.name,
-        os: result.os.name,
-        device: result.device.type || "Desktop",
-        referrer: req.get("referer") || "Direct",
-        userAgent: req.headers["user-agent"],
-        country: location?.country,
-        region: location?.region,
-        city: location?.city,
-        latitude: location?.lat,
-        longitude: location?.lon,
-        timezone: location?.timezone,
-        isp: location?.isp
-    });
-        console.log("Click saved:", click);
-        // Increase click count
+       
         url.totalClicks += 1;
-
         await url.save();
-        console.log("URL updated with new click count:", url.originalUrl)
-        // Redirect
+
         return res.redirect(url.originalUrl);
 
+    } catch (err) {
 
-    } catch (error) {
-        console.error(error);
+        console.log(err);
 
-        res.status(500).json({
-            success: false,
-            message: "Server Error"
-        });
+        return res.status(500).send("Server Error");
+
     }
+
 };
+
 
 module.exports = {
     createShortUrl,

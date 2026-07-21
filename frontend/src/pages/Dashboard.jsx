@@ -67,14 +67,6 @@ function Dashboard() {
                                 Manage, shorten and track all your links.
                             </p>
                         </div>
-
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium">
-                            <div className="flex items-center gap-2">
-                                <FiLink />
-                                Create Link
-                            </div>
-                        </button>
-
                     </div>
 
                     {/* Top Section */}
@@ -211,21 +203,6 @@ function Dashboard() {
                                                         item.createdAt
                                                     ).toLocaleDateString()}
                                                 </span>
-                                            </div>
-
-                                            {/* Analytics Button */}
-                                            <div className="mt-6">
-                                                <button
-                                                    onClick={() =>
-                                                        navigate(
-                                                            `/analytics/${item._id}`
-                                                        )
-                                                    }
-                                                    className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-                                                >
-                                                    <FiBarChart2 />
-                                                    View Analytics
-                                                </button>
                                             </div>
                                         </div>
                                     ))}

@@ -50,16 +50,7 @@ function Navbar() {
                             Dashboard
                         </Link>
 
-                        <Link
-                            to="/analytics"
-                            className={`${
-                                location.pathname==="/analytics"
-                                ? "text-blue-600 font-semibold"
-                                : "text-slate-600"
-                            }`}
-                        >
-                            Analytics
-                        </Link>
+                        
 
                         <span className="text-slate-500">
 
