@@ -27,22 +27,28 @@ const { id } = useParams();
 const [analytics, setAnalytics] = useState(null);
 
 useEffect(() => {
+
+    const fetchAnalytics = async () => {
+
+        try {
+
+            const response = await getAnalytics(id);
+
+            console.log(response.data);
+
+            setAnalytics(response.data);
+
+        } catch (err) {
+
+            console.log(err);
+
+        }
+
+    };
+
     fetchAnalytics();
-}, []);
 
-const fetchAnalytics = async () => {
-    try {
-        const response = await getAnalytics(id);
-
-        console.log(response.data);
-
-        setAnalytics(response.data);
-
-    } catch (err) {
-        console.log(err);
-    }
-};
-
+}, [id]);
 
 
 
