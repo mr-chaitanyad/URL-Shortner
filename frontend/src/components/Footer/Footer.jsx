@@ -48,7 +48,7 @@ function Footer() {
 
                             <li>
                                 <a
-                                    href="#"
+                                    href="/dashboard"
                                     className="hover:text-blue-400 transition"
                                 >
                                     Create URL
@@ -126,7 +126,7 @@ function Footer() {
                     <div className="flex gap-5 text-sm">
 
                         <a
-                            href="#"
+                            href="/privacy-policy"
                             className="hover:text-blue-400 transition"
                         >
                             Privacy Policy
@@ -134,7 +134,7 @@ function Footer() {
 
 
                         <a
-                            href="#"
+                            href="/terms-of-service"
                             className="hover:text-blue-400 transition"
                         >
                             Terms
