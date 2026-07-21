@@ -2,8 +2,6 @@ const { nanoid } = require('nanoid');
 const Url = require("../models/Url");
 
 
-const getGeoLocation = require("../src/utils/getGeoLocation");
-
 
 const createShortUrl = async (req,res) =>{
     try{
