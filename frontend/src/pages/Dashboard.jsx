@@ -7,7 +7,6 @@ import {
     FiMousePointer,
     FiCalendar,
 } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
     const user = JSON.parse(localStorage.getItem("user"));
